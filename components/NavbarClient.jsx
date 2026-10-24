@@ -17,33 +17,33 @@ export function NavbarClient({ user, signOutAction }) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 glass-panel border-b border-slate-200/80 transition-all duration-300">
-      <div className="w-full px-6 lg:px-12 xl:px-16 py-3.5 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <span className="w-9 h-9 rounded-xl bg-slate-950 text-amber-400 flex items-center justify-center font-black text-lg shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors">
+    <header className="sticky top-0 z-50 glass-dark border-b border-slate-800 transition-all duration-300">
+      <div className="w-full px-8 lg:px-16 xl:px-24 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3 group">
+          <span className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shadow-md group-hover:bg-amber-300 transition-colors">
             A
           </span>
           <div>
-            <span className="font-black text-xl text-slate-950 tracking-tight block leading-none">
+            <span className="font-black text-xl text-white tracking-tight block leading-none">
               Addis Eats
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">
+            <span className="text-[10px] uppercase tracking-widest text-amber-400/90 font-bold">
               Addis Ababa • Est. 2026
             </span>
           </div>
         </Link>
 
-        <nav className="flex items-center gap-2 sm:gap-5 text-sm font-semibold">
+        <nav className="flex items-center gap-3 sm:gap-6 text-sm font-semibold">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-1.5 rounded-full transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full transition-all duration-300 ${
                   active
-                    ? "bg-slate-900 text-white shadow-sm"
-                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-100"
+                    ? "bg-amber-400 text-slate-950 font-bold shadow-md shadow-amber-400/20"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800"
                 }`}
               >
                 {link.label}
@@ -53,10 +53,10 @@ export function NavbarClient({ user, signOutAction }) {
 
           <Link
             href="/cart"
-            className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-900 border border-amber-500/30 hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 font-bold"
+            className="relative inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 font-bold"
           >
             <span>Bag</span>
-            <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-xs font-extrabold rounded-full bg-slate-950 text-white">
+            <span className="inline-flex items-center justify-center min-w-[22px] h-5 px-1.5 text-xs font-black rounded-full bg-amber-400 text-slate-950">
               {itemCount}
             </span>
           </Link>
@@ -64,21 +64,21 @@ export function NavbarClient({ user, signOutAction }) {
           {user?.role === "staff" && (
             <Link
               href="/kitchen"
-              className="px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold hover:bg-emerald-100 transition"
+              className="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold hover:bg-emerald-500 hover:text-slate-950 transition"
             >
               Kitchen Live
             </Link>
           )}
 
           {user ? (
-            <div className="hidden sm:flex items-center gap-3 ml-2 border-l border-slate-200 pl-4">
-              <span className="text-slate-600 text-xs font-medium">
+            <div className="hidden sm:flex items-center gap-3 ml-3 border-l border-slate-800 pl-4">
+              <span className="text-slate-400 text-xs font-medium">
                 Hi, {user.name}
               </span>
               <form action={signOutAction}>
                 <button
                   type="submit"
-                  className="text-xs text-red-600 hover:underline font-semibold"
+                  className="text-xs text-red-400 hover:underline font-semibold"
                 >
                   Sign Out
                 </button>
@@ -87,7 +87,7 @@ export function NavbarClient({ user, signOutAction }) {
           ) : (
             <Link
               href="/signin"
-              className="px-4 py-1.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all shadow-sm font-semibold text-xs sm:text-sm"
+              className="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition-all shadow-md font-bold text-xs sm:text-sm"
             >
               Sign In
             </Link>
