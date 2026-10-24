@@ -55,7 +55,7 @@ export default async function RootLayout({ children }) {
           <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 mt-20">
             {/* Visual Culinary Showcase Strip inside Footer */}
             <div className="relative w-full overflow-hidden border-b border-slate-800">
-              <div className="max-w-7xl mx-auto px-6 lg:px-16 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="w-full px-4 sm:px-8 lg:px-12 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 space-y-3">
                   <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
                     From Our Traditional Clay Kitchen
@@ -103,7 +103,7 @@ export default async function RootLayout({ children }) {
             </div>
 
             {/* Multi-column agency footer links */}
-            <div className="max-w-7xl mx-auto px-6 lg:px-16 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+            <div className="w-full px-4 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-7 h-7 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-black">

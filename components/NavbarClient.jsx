@@ -1,3 +1,4 @@
+// components/NavbarClient.jsx
 "use client";
 
 import Link from "next/link";
@@ -18,7 +19,7 @@ export function NavbarClient({ user, signOutAction }) {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-slate-950/95 backdrop-blur-xl border-b border-slate-800/80 transition-all duration-300">
-      <div className="w-full px-8 lg:px-16 py-4 flex justify-between items-center">
+      <div className="w-full px-6 lg:px-12 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3.5 group">
           <span className="w-11 h-11 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shadow-lg shadow-amber-400/20 group-hover:scale-105 transition-transform">
             A
@@ -33,7 +34,7 @@ export function NavbarClient({ user, signOutAction }) {
           </div>
         </Link>
 
-        <nav className="flex items-center gap-3 lg:gap-6 text-sm font-semibold">
+        <nav className="flex items-center gap-2 lg:gap-6 text-sm font-semibold">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
@@ -72,9 +73,7 @@ export function NavbarClient({ user, signOutAction }) {
 
           {user ? (
             <div className="hidden md:flex items-center gap-3 ml-3 border-l border-slate-800 pl-4">
-              <span className="text-slate-400 text-xs font-medium">
-                Hi, {user.name}
-              </span>
+              <span className="text-slate-400 text-xs font-medium">Hi, {user.name}</span>
               <form action={signOutAction}>
                 <button
                   type="submit"
