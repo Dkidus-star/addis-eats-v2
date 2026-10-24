@@ -1,17 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import { Providers } from "@/components/Providers";
 import { NavbarClient } from "@/components/NavbarClient";
 import { getSession } from "@/lib/session";
 import { signOut } from "@/app/auth-actions";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata = {
   metadataBase: new URL(
@@ -23,19 +16,6 @@ export const metadata = {
   },
   description:
     "Order fresh, authentic Ethiopian dishes delivered hot across Addis Ababa.",
-  openGraph: {
-    title: "Addis Eats — Artisanal Ethiopian Culinary Delivery",
-    description:
-      "Order fresh wats, sizzling tibs, kitfo, and vegetarian platters delivered across Addis Ababa.",
-    siteName: "Addis Eats",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Addis Eats",
-    description: "Authentic Ethiopian Food Delivery in Addis Ababa",
-  },
 };
 
 export default async function RootLayout({ children }) {
@@ -58,8 +38,11 @@ export default async function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-amber-400 selection:text-slate-950">
+    <html lang="en">
+      <body
+        className="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-amber-400 selection:text-slate-950"
+        style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
