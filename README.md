@@ -40,7 +40,7 @@ Addis Eats v2 is a production-grade, full-stack food ordering and culinary platf
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/addis-eats-v2.git
+   git clone https://github.com/Dkidus-star/addis-eats-v2.git
    cd addis-eats-v2
 
 2.  **Install dependencies**:
