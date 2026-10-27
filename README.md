@@ -1,6 +1,6 @@
 # Addis Eats v2 — Artisanal Ethiopian Gastronomy & Real-Time Delivery Platform
 
-> **Live Production Demo**: (https://addis-eats-v2-ruby.vercel.app)
+> **Live Production Demo**: https://addis-eats-v2-ruby.vercel.app
 
 Addis Eats v2 is a production-grade, full-stack food ordering and culinary platform that bridges traditional Ethiopian gastronomy with an Apple/Stripe-inspired digital experience. Built on **Next.js 16 App Router**, **React 19**, **Tailwind CSS v4**, and **Vercel**, it features hybrid rendering architectures, real-time SWR telemetry polling, multi-layer enterprise security, and responsive widescreen UI design.
 
@@ -13,7 +13,7 @@ Addis Eats v2 is a production-grade, full-stack food ordering and culinary platf
 - **Data & Telemetry**: SWR (Stale-While-Revalidate) with background polling & server fallback hydration
 - **Validation**: Zod schema validation across client forms, server actions, and route handlers
 - **Security**: 3-layer enterprise defense (Edge Middleware, Server Role Claims, Action Ownership)
-- **Deployment**: Vercel Edge Network (`https://addis-eats-v2-ruby.vercel.app`)
+- **Deployment**: Vercel Edge Network `https://addis-eats-v2-ruby.vercel.app`
 
 ---
 
@@ -40,7 +40,7 @@ Addis Eats v2 is a production-grade, full-stack food ordering and culinary platf
 
 1. **Clone the repository**:
    ```bash
-   git clone (https://github.com/your-username/addis-eats-v2.git)
+   git clone https://github.com/your-username/addis-eats-v2.git
    cd addis-eats-v2
 
 2.  **Install dependencies**:
@@ -52,7 +52,6 @@ Addis Eats v2 is a production-grade, full-stack food ordering and culinary platf
 4  **Open your browser**:
    Navigate to http://localhost:3000. 
    
-     ```bash
        npm run build
        npm run start
       
